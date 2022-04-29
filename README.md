@@ -1,7 +1,1 @@
-# algoritmos_ads
-
-
-aaaaaaaaaaaaaaaaaaaaaa
-
-
-aaaaaaaaaaaaaaa
+#Aluno: Vitor Araujo dos Santos
