@@ -40,11 +40,4 @@ function verifica_se_contem_somente_a_serie_de_letras(palavras, serie_de_letras)
     console.log(`${contador} (${percentual.toFixed(2)}%) palavra(s) contêm apenas letras da série especificada (${serie_de_letras} em sua composição)`)
 }
 
-
-
-
-const serie = "at"
-
-const palavras = ["arroz", "feijao", "lucas", "vitor", "alemao"]
-
 verifica_se_contem_somente_a_serie_de_letras(palavras, serie)

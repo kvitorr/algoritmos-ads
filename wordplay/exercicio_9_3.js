@@ -62,28 +62,5 @@ function palavras_sem_letras_proibidas(palavras, letras_proibidas){
 
 }
 
-const letras_proibidas = "r"
-
-const palavras = ["arroz", "feijao", "lucas", "vitor", "alemao"]
-
 
 palavras_sem_letras_proibidas(palavras, letras_proibidas)
-
-
-
-/*
-function avoids(palavras, letras_proibidas){
-    
-       for (let letra2 of palavras){
-
-       for (let letra1 of letras_proibidas) {
-
-            if(letra1 === letra2){
-                return false
-            } else {
-                console.log(palavras)
-            }
-       }
-    }
-}
-*/
