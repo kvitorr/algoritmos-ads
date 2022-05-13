@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const input = fs.readFileSync('./input.txt', 'utf-8');
+const input = fs.readFileSync('./q1094_input.txt', 'utf-8');
 let lines = input.split('\r\n');
 
 function main(){
@@ -19,6 +19,7 @@ function main(){
     //Processamento
     while(numeros_de_experimentos > n) {
     [quantidade_de_animais, tipo_de_animal] = experimento(lines)
+
 
         if (tipo_de_animal === "C"){
             coelhos += quantidade_de_animais
