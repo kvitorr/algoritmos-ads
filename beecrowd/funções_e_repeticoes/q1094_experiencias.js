@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const input = fs.readFileSync('./q1094_input.txt', 'utf-8');
+const input = fs.readFileSync('./q1094_experiencias.txt', 'utf-8');
 let lines = input.split('\r\n');
 
 function main(){

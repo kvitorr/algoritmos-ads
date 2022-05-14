@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const input = fs.readFileSync("q1116_input.txt", "utf-8")
+const input = fs.readFileSync("./q1116_dividindo_x_por_y.txt", "utf-8")
 const lines = input.split('\n')
 
 function main(){

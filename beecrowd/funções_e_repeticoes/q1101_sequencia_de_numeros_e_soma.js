@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const input = fs.readFileSync('./input.txt', 'utf-8')
+const input = fs.readFileSync('./q1101_sequencia_de_numeros_e_soma.txt', 'utf-8')
 let lines = input.split("\r\n")
 
 function main(){

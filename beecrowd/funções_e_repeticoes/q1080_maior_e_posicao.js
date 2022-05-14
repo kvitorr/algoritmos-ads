@@ -1,7 +1,6 @@
 
 import fs from 'fs'
-
-var input = fs.readFileSync('./input.txt', 'utf8');
+var input = fs.readFileSync('./q1080_maior_e_posicao.txt', 'utf8');
 
 var lines = input.split('\n');
 

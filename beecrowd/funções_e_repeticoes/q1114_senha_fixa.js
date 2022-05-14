@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const input = fs.readFileSync('./q114_input.txt', 'utf-8')
+const input = fs.readFileSync('./q1114_senha_fixa.txt', 'utf-8')
 const lines = input.split('\r\n')
 
 

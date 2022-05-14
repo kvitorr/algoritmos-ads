@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const input = fs.readFileSync('q1442_input.txt', 'utf-8')
+const input = fs.readFileSync('./q1142_pum.txt', 'utf-8')
 const lines = input.split('\n')
 
 function main(){
