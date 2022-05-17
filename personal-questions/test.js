@@ -1,11 +1,8 @@
+import fs from 'fs'
+const lines = fs.readFileSync('./input.txt', 'utf-8').split('\r\n')
 
+var nomeDoVendedor = String(lines.shift()); var salarioFixo = parseFloat(lines.shift()); var vendasMes = parseFloat(lines.shift());
 
+var totalReceber = parseFloat(salarioFixo + (vendasMes * 0.15)).toFixed(2)
 
-
-const isTriRetangle = (A, B, C) => {return (A*A) === (B*B + C*C)}
-
-const A = 5
-const B = 3
-const C = 4
-
-console.log(isTriRetangle(A, B, C))
+console.log("TOTAL = R$" + totalReceber)
