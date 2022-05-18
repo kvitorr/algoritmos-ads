@@ -1,8 +1,7 @@
 import fs from 'fs'
-const lines = fs.readFileSync('./input.txt', 'utf-8').split('\r\n')
+const values = fs.readFileSync('./input.txt', 'utf-8').split('\r\n')
 
-var nomeDoVendedor = String(lines.shift()); var salarioFixo = parseFloat(lines.shift()); var vendasMes = parseFloat(lines.shift());
 
-var totalReceber = parseFloat(salarioFixo + (vendasMes * 0.15)).toFixed(2)
+values.shift();
 
-console.log("TOTAL = R$" + totalReceber)
+values.map((item, i) => {const answer = item.replace("\r", "");console.log(`resposta ${i + 1}: ${answer}`); });

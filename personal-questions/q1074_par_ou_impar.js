@@ -31,11 +31,7 @@ function main(){
         console.log(resultado)
         resultado = ""
         contador++
-
     }
-
-
-
 } 
 
 const ehPar = (n1) => {return ((n1 % 2) === 0)}
