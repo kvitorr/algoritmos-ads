@@ -1,18 +1,26 @@
-function substitui_numero_por_extenso(caractere){
+import prompt from 'prompt-sync'
+const input = prompt()
 
-    const numeros_por_extenso = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"]
 
-    const index = Number(caractere)
+function string_menor_igual_20_caracteres(){
 
-    const numero_extenso = numeros_por_extenso[index]
-    
-    return numero_extenso
+    let string = input('Palavra: ')
+
+    let tamanho_string = string.length
+
+
+    while(tamanho_string > 20){
+        
+        console.log('ERRO: Digite uma palavra com até 20 caracteres')
+        string = input('Palavra: ')
+
+        tamanho_string = string.length
+        console.log(tamanho_string)
+    }
+
+    return string
 
 }
 
 
-const a = "7"
-
-const b = substitui_numero_por_extenso(a)
-
-console.log(b)
+const b = string_menor_igual_20_caracteres()
