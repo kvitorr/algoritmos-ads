@@ -9,19 +9,18 @@ function main(){
 
 
     const populationB = 800.000
-    const growthRateB = 0.135
+    const growthRateB = 0.0135
     let totalPopulationB = populationB
 
     let years = 0
 
     while(totalPopulationA < totalPopulationB){
 
-        totalPopulationA = totalPopulationA * (1 + growthRateA)
-        totalPopulationB = totalPopulationB * (1 + growthRateB)
+        totalPopulationA += totalPopulationA * growthRateA
+        totalPopulationB += totalPopulationB * growthRateB
 
         years++
 
-      console.log(totalPopulationA)
     }
     
     console.log(`Levarão ${years} anos para que a população da cidade A ultrapasse a população da cidade B`)
