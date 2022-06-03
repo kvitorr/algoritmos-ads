@@ -1,3 +1,5 @@
+//Aceita
+
 import fs from 'fs'
 const lines = fs.readFileSync('q1222_concurso_de_contos.txt', 'utf-8').split('\r\n')
 

@@ -1,3 +1,5 @@
+//Aceita
+
 import fs from 'fs'
 const lines = fs.readFileSync('q1235_dentro_pra_fora.txt', 'utf-8').split('\r\n')
 
