@@ -7,13 +7,13 @@ function main(){
 
     const nome = input('Nome: ')
 
-    const nome_formatado = nome_normatizado(nome)
+    const nome_formatado = formata_nome(nome);
 
     console.log(nome_formatado)
 
 } 
 
-function nome_normatizado(nome){
+function formata_nome(nome){
 
     const vetor_nome = nome.split(' ')
     const ultimo_index = vetor_nome.length - 1
