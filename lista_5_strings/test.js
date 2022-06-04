@@ -2,25 +2,19 @@ import prompt from 'prompt-sync'
 const input = prompt()
 
 
-function string_menor_igual_20_caracteres(){
+function inverter_string(string){
 
-    let string = input('Palavra: ')
+    let ultimo_index = string.length - 1
+    let string_invertida = ""
 
-    let tamanho_string = string.length
+    for(let i = ultimo_index; i >= 0; i--){
 
-
-    while(tamanho_string > 20){
-        
-        console.log('ERRO: Digite uma palavra com até 20 caracteres')
-        string = input('Palavra: ')
-
-        tamanho_string = string.length
-        console.log(tamanho_string)
+        string_invertida += string[i]
     }
-
-    return string
-
+    
+    return string_invertida
 }
 
+const a = inverter_string('Vitor')
 
-const b = string_menor_igual_20_caracteres()
+console.log(a)
