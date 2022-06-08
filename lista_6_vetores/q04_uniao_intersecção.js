@@ -17,7 +17,6 @@ function main(){
     console.log(`\tConjunto União: [${vetorC.join(', ')}]`)
     console.log(`\tConjunto Intersecção: [${vetorD.join(', ')}]`)
 
-
 } 
 
 function uniao_vetores(vetor1, vetor2){

@@ -119,3 +119,78 @@ export function concatenar_dois_vetores(vetor1, vetor2){
     return vetor3
 
 }
+
+
+//Maior e menor elemento de um vetor
+
+export function maior_elemento(vetor){
+
+    let maior_elemento = vetor[0]
+    let index_maior_elemento = 0
+
+    for(let i = 0; i < vetor.length; i++){
+
+        if(vetor[i] > maior_elemento){
+            maior_elemento = vetor[i]
+            index_maior_elemento = i
+        }
+    }
+    return [index_maior_elemento, maior_elemento]
+}
+
+export function menor_elemento(vetor){
+
+    let menor_elemento = vetor[0]
+    let index_menor_elemento = 0
+
+    for(let i = 0; i < vetor.length; i++){
+
+        if(vetor[i] < menor_elemento){
+            menor_elemento = vetor[i]
+            index_menor_elemento = i
+        }
+    }
+    return [index_menor_elemento, menor_elemento]
+}
+
+
+// Retirar elemento
+
+export function retira_elemento(vetor, index){
+
+    const tamanho_novo_vetor = vetor.length - 1
+
+    let vetor_modificado = new_vector(tamanho_novo_vetor)
+
+    let new_index = 0
+
+    for(let i = 0; i < vetor.length; i += 1){
+
+        if(i !== index){
+            vetor_modificado[new_index] = vetor[i]
+            new_index++
+        }
+
+    }
+    return vetor_modificado
+}
+
+
+//Colocar vetor em ordem crescente
+
+export function vetor_ascending_order(vetor){
+
+    let vetor_crescente = new Array(vetor.length)
+    let elemento
+    let index
+
+    const tamanho_vetor_original = vetor.length
+
+    for(let i = 0; i < tamanho_vetor_original; i += 1){
+        [index, elemento] = menor_elemento(vetor);
+        vetor_crescente[i] = vetor[index]
+        vetor = retira_elemento(vetor, index)
+    }
+    vetor_crescente
+    return vetor_crescente
+}
