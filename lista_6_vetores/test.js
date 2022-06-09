@@ -1,28 +1,68 @@
-import { new_vector } from "./vetor_functions.js"
+import { input, get_number } from "./utility.js"
 
-new_vector
+function printa_matriz(matriz){
 
-const a = [1, 2, 3, 4, 5]
+    const qtd_de_colunas = matriz.length
 
-function retira_elemento(vetor, index){
-
-    const tamanho_novo_vetor = vetor.length - 1
-
-    let vetor_modificado = new_vector(tamanho_novo_vetor)
-
-    let new_index = 0
-
-    for(let i = 0; i < vetor.length; i += 1){
-
-        if(i !== index){
-            vetor_modificado[new_index] = vetor[i]
-            new_index++
-        }
-
+    for(let i = 0; i < qtd_de_colunas; i++){
+        console.log(matriz[i])
     }
-    return vetor_modificado
 }
 
-const b = retira_elemento(a, 2)
 
-console.log(b)
+function get_matriz_quadrada(n){
+
+    const matriz = new Array(n)
+
+    for(let index = 0; index < n; index++){
+        matriz[index] = new Array(n)
+    }
+
+    return matriz
+
+}
+
+function fill_matriz_string(matriz){
+
+    const qtd_de_colunas = matriz.length
+    const qtd_de_linhas = matriz[0].length
+
+    for(let i = 0; i < qtd_de_colunas; i++){
+
+        console.log(`==== Linha ${i} ====`)
+        for(let j = 0; j < qtd_de_linhas; j++){            
+            matriz[i][j] = input(`[${i}][${j}] = `)
+        }
+    }
+    return matriz
+}
+
+function get_matriz_quadrada_transposta(matriz){
+
+    const qtd_de_colunas = matriz.length
+    const qtd_de_linhas = matriz[0].length
+
+    const matriz_transposta = get_matriz_quadrada(qtd_de_colunas)
+
+    for(let i = 0; i < qtd_de_colunas; i++){
+
+        for(let j = 0; j < qtd_de_linhas; j++){
+
+            matriz_transposta[j][i] = matriz[i][j]
+        }
+    }
+
+    return matriz_transposta
+
+}
+
+function get_matriz(qtd_de_linhas, qtd_de_colunas){
+
+    const vetor = new Array(qtd_de_linhas)
+
+    for(let i = 0; i < qtd_de_linhas; i++){
+        vetor[i] = new Array(qtd_de_colunas)
+    }
+
+    return vetor
+}

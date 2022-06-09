@@ -1,11 +1,6 @@
 import prompt from "prompt-sync"
 const input = prompt()
 
-
-
-
-
-
 //Criar vetor com valor padrão
 
 export function new_vector(quantidade_de_elementos, valor_padrao){
@@ -194,3 +189,4 @@ export function vetor_ascending_order(vetor){
     vetor_crescente
     return vetor_crescente
 }
+
