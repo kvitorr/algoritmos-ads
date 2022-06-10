@@ -77,6 +77,8 @@ function resultadoEleicao (candidato1, candidato2, candidato3, brancos){
 
     if(porcentagemBrancos > (porcentagemCandidato1 + porcentagemCandidato2 + porcentagemCandidato3)){
         return "Nova eleição: quantidade de votos brancos é maior que 50%"
+    } else if(porcentagemCandidato1 === porcentagemCandidato2 && porcentagemCandidato1 === porcentagemCandidato3 && porcentagemCandidato2 === porcentagemCandidato3){
+        return "Nova Eleição: Empate"
     } else if (maior === porcentagemCandidato1){
         return "Candidato 1 venceu a eleição"
     } else if (maior === porcentagemCandidato2){
@@ -87,6 +89,7 @@ function resultadoEleicao (candidato1, candidato2, candidato3, brancos){
         return "Nova Eleição: Empate"
     }
 }
+
 
 
 main()
