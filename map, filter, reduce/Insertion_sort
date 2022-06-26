@@ -1,0 +1,17 @@
+
+
+Algoritmo Insertion Sort
+
+    1. Tem-se um vetor de n elementos preenchido aleatoriamente e desorganizado.
+    2. Inicie o algoritmo Insertion Sort a partir do segundo elemento do vetor para organiza-lo na ordem crescente.
+    
+    3. Inicialmente, compare se o segundo elemento do vetor é menor ou maior que o primeiro elemento
+        - Se for menor, troque o segundo elemento de posição com o primeiro elemento.
+        - Se for maior, não faça nenhuma mudança de posição.
+
+    4. Em seguida, compare o terceiro elemento com o segundo e posteriomente com o primeiro elemento.
+        - Se o terceiro elemento for menor que o segundo elemento, troque suas posições. Se o terceiro elemento também for menor que o primeiro elemento, troque suas posições, caso contrário, não faça nada. 
+
+    5. Repita esse mesmo processo para os elementos restantes do vetor, sempre compare o elemento atual com todos os seus antecessores. Dessa forma, o elemento escolhido vai trocar de posição com os elementos que são maiores que ele.
+
+    6. Por fim, você vai obter um vetor ordenado de forma crescente.   
