@@ -190,3 +190,22 @@ export function vetor_ascending_order(vetor){
     return vetor_crescente
 }
 
+//Colocar vetor em ordem decrescente
+
+export function vetor_descending_order(vetor){
+
+    let vetor_crescente = new Array(vetor.length)
+    let elemento
+    let index
+
+    const tamanho_vetor_original = vetor.length
+
+    for(let i = 0; i < tamanho_vetor_original; i += 1){
+        [index, elemento] = maior_elemento(vetor);
+        vetor_crescente[i] = vetor[index]
+        vetor = retira_elemento(vetor, index)
+    }
+    vetor_crescente
+    return vetor_crescente
+}
+
