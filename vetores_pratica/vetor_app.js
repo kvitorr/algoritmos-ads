@@ -7,7 +7,7 @@ const input = prompt()
 function main(){
 
     menu()
-    let option = get_number_inside_range(0, 12)
+    let option = get_number_inside_range(0, 14)
     let vetor, valor_padrao, qtd_de_elementos, elemento, indice, caminho_arquivo
 
     while (option !== 0) {
