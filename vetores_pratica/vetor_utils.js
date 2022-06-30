@@ -18,7 +18,6 @@ export function get_vetor_numeros_aleatorios(tamanho, limite_inferior, limite_su
 
 //Preencher vetor com números definidos pelo usuário
 export function get_vetor_numeros_definidos(tamanho, limite_inferior, limite_superior) {
-
     const vetor = new Array(tamanho)
 
     for (let i = 0; i < vetor.length; i++) {
@@ -26,13 +25,11 @@ export function get_vetor_numeros_definidos(tamanho, limite_inferior, limite_sup
         vetor[i] = get_number_inside_range(limite_inferior, limite_superior)
     }
     return vetor
-
 }
 
 
 //Maior e menor elemento de um vetor
 export function maior_elemento_vetor(vetor) {
-
     let maior_elemento = vetor[0]
     let index_maior_elemento = 0
 
@@ -46,8 +43,8 @@ export function maior_elemento_vetor(vetor) {
     return [index_maior_elemento, maior_elemento]
 }
 
-export function menor_elemento_vetor(vetor) {
 
+export function menor_elemento_vetor(vetor) {
     let menor_elemento = vetor[0]
     let index_menor_elemento = 0
 
@@ -61,24 +58,20 @@ export function menor_elemento_vetor(vetor) {
     return [index_menor_elemento, menor_elemento]
 }
 
-export function media_elementos_vetor(vetor) {
 
+export function media_elementos_vetor(vetor) {
     const tamanho = vetor.length
     let soma = 0
 
     for (let i = 0; i < tamanho; i++) {
-
         soma += vetor[i]
-
     }
-
     const media = soma / tamanho
-
     return media.toFixed(2)
 }
 
-export function somatorio_elementos_vetor(vetor) {
 
+export function somatorio_elementos_vetor(vetor) {
     let soma = 0
 
     for (let i = 0; i < vetor.length; i++) {
@@ -87,8 +80,8 @@ export function somatorio_elementos_vetor(vetor) {
     return soma
 }
 
-export function filtra_elementos_positivos(vetor) {
 
+export function filtra_elementos_positivos(vetor) {
     let vetor_positivos = []
 
     for (let i = 0; i < vetor.length; i++) {
@@ -100,7 +93,6 @@ export function filtra_elementos_positivos(vetor) {
 }
 
 export function filtra_elementos_negativos(vetor) {
-
     let vetor_negativos = []
 
     for (let i = 0; i < vetor.length; i++) {
@@ -113,7 +105,6 @@ export function filtra_elementos_negativos(vetor) {
 
 
 export function get_elementos_multiplicados(vetor, valor){
-
     for (let index = 0; index < vetor.length; index++) {
         vetor[index] *= valor 
     }
@@ -121,21 +112,20 @@ export function get_elementos_multiplicados(vetor, valor){
 
 
 export function get_elementos_divididos(vetor, valor){
-
     for (let index = 0; index < vetor.length; index++) {
         vetor[index] /= valor 
     }
 }
 
-export function get_elementos_elevado_a_potencia(vetor, valor){
 
+export function get_elementos_elevado_a_potencia(vetor, valor){
     for (let index = 0; index < vetor.length; index++) {
         vetor[index] **= valor 
     }
 }
 
-export function change_negatives_elements(vetor, inicio, fim){
 
+export function change_negatives_elements(vetor, inicio, fim){
     console.log()
     for (let i = 0; i < vetor.length; i++) {
         if(vetor[i] < 0){
@@ -160,6 +150,7 @@ export function insertion_sort(array){
     }
     return array
 }
+
 
 export function embaralhar_array(arr) {
     let j

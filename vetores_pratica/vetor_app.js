@@ -1,5 +1,4 @@
 import { inicializar_vetor_numerico, show_vetor, resetar_vetor, mostrar_quantidade_de_elementos, mostrar_maior_menor_elementos_e_posicoes, mostrar_media_dos_elementos_vetor, mostrar_somatorio_dos_elementos_vetor, mostrar_elementos_positivos_e_quantidade, mostrar_elementos_negativos_e_quantidade, mapear_vetor, add_novos_elementos, remover_elementos_especificos, editar_elemento_vetor } from './vetor_funcionalidades.js'
-
 import prompt from 'prompt-sync'
 import { get_number, get_number_inside_range } from './utils.js'
 import fs from 'fs'
@@ -17,15 +16,12 @@ function main(){
     let caminho_arquivo
 
     while (option !== 0) {
-
         console.clear()
 
         if (option === 1) {
             vetor = inicializar_vetor_numerico()
-
         } else if (option === 2) {
             show_vetor(vetor)
-
         } else if (option === 3) {
             valor_padrao = Number(input('Digite o valor padrão: '))
             vetor = resetar_vetor(vetor, valor_padrao)
@@ -61,11 +57,11 @@ function main(){
             fs.writeFileSync(caminho_arquivo, vetor.join(' ') + "\n", {flag: 'a'})
         }
 
-
-
         input('Aperte ENTER para continuar... ')
         console.clear()
         menu()
+
+
         option = Number(input('Selecione uma opção: '))
         console.clear()
         if(option === 0) {
@@ -73,7 +69,6 @@ function main(){
             caminho_arquivo = input('Escreva o caminho do arquivo: (./arquivo.txt): ')
             fs.writeFileSync(caminho_arquivo, vetor.join(' ') + "\n", {flag: 'a'})
         }
-
     }
 
     console.clear()
@@ -97,8 +92,6 @@ function menu() {
     menu += '\t12. Remover elemento específico do vetor\n'
     menu += '\t13. Editar elemento por índice\n'
     menu += '\t14. Salvar elementos em arquivo\n'
-
-
     menu += '\n0. Encerrar'
 
     console.log(menu)

@@ -1,13 +1,10 @@
 import { get_number, get_number_inside_range, get_positive_number, load_vector } from "./utils.js";
 import { filtra_elementos_positivos, get_vetor_numeros_aleatorios, get_vetor_numeros_definidos, maior_elemento_vetor, media_elementos_vetor, menor_elemento_vetor, somatorio_elementos_vetor, filtra_elementos_negativos,             get_elementos_multiplicados, get_elementos_divididos, get_elementos_elevado_a_potencia, change_negatives_elements, insertion_sort, embaralhar_array} from './vetor_utils.js'
-
 import prompt from 'prompt-sync'
 const input = prompt()
 
 
-
 export function inicializar_vetor_numerico() {
-
     let vetor
 
     console.log('OPÇÃO: Inicializar um vetor: ')
@@ -23,23 +20,16 @@ export function inicializar_vetor_numerico() {
         const tamanho = get_positive_number('Digite o tamanho do vetor: ')
         const [limite_inferior, limite_superior] = input('Digite o limite inferior e o limite superior do vetor, separados por espaço: ').split(' ').map(Number)
 
-
         console.clear()
         console.log(`Tamanho do vetor: ${tamanho}. Limites: [${limite_inferior}, ${limite_superior}]\n`)
 
         if (sub_option === 1) {
-
             vetor = get_vetor_numeros_aleatorios(tamanho, limite_inferior, limite_superior)
-
             return vetor
-
         } else {
             vetor = get_vetor_numeros_definidos(tamanho, limite_inferior, limite_superior)
-
             return vetor
         }
-
-
     } else if (sub_option === 3) {
         console.log('OPÇÃO: Preencher vetor com arquivo: ')
         const local_arquivo = input('Digite o local do arquivo (./valores.txt): ')
@@ -50,27 +40,27 @@ export function inicializar_vetor_numerico() {
     }
 }
 
+
 export function show_vetor(vetor) {
     console.log(vetor)
 }
 
 
 export function resetar_vetor(vetor, valor_padrao) {
-
     for (let i = 0; i < vetor.length; i++) {
         vetor[i] = valor_padrao
     }
     return vetor
 }
 
+
 export function mostrar_quantidade_de_elementos(vetor) {
     console.log(`Quantidade de elementos do vetor: ${vetor.length}\n`)
 }
 
+
 export function mostrar_maior_menor_elementos_e_posicoes(vetor) {
-
     const [i_menor, menor_elemento] = menor_elemento_vetor(vetor)
-
     const [i_maior, maior_elemento] = maior_elemento_vetor(vetor)
 
     console.log('Index iniciando do 0.')
@@ -78,8 +68,8 @@ export function mostrar_maior_menor_elementos_e_posicoes(vetor) {
     console.log(`\tMenor elemento: Vetor[${i_menor}] = ${menor_elemento}`)
 }
 
-export function mostrar_media_dos_elementos_vetor(vetor) {
 
+export function mostrar_media_dos_elementos_vetor(vetor) {
     const media = media_elementos_vetor(vetor)
 
     console.log('Media dos elementos do vetor:')
@@ -87,8 +77,8 @@ export function mostrar_media_dos_elementos_vetor(vetor) {
     console.log(`Media: ${media}`)
 }
 
-export function mostrar_somatorio_dos_elementos_vetor(vetor) {
 
+export function mostrar_somatorio_dos_elementos_vetor(vetor) {
     const soma = somatorio_elementos_vetor(vetor)
 
     console.log('Somatório dos elementos do vetor:')
@@ -96,8 +86,8 @@ export function mostrar_somatorio_dos_elementos_vetor(vetor) {
     console.log(`Somatório: ${soma}`)
 }
 
-export function mostrar_elementos_positivos_e_quantidade(vetor) {
 
+export function mostrar_elementos_positivos_e_quantidade(vetor) {
     const [vetor_positivos, qtd] = filtra_elementos_positivos(vetor)
 
     console.log('Vetor original: ')
@@ -107,8 +97,8 @@ export function mostrar_elementos_positivos_e_quantidade(vetor) {
     console.log(`Quantidade de elementos: ${qtd}`)
 }
 
-export function mostrar_elementos_negativos_e_quantidade(vetor) {
 
+export function mostrar_elementos_negativos_e_quantidade(vetor) {
     const [vetor_negativos, qtd] = filtra_elementos_negativos(vetor)
 
     console.log('Vetor original: ')
@@ -117,6 +107,7 @@ export function mostrar_elementos_negativos_e_quantidade(vetor) {
     console.log(vetor_negativos)
     console.log(`Quantidade de elementos: ${qtd}`)
 }
+
 
 export function mapear_vetor(vetor){
     console.log('Opções de mapeamento: ')
@@ -127,12 +118,10 @@ export function mapear_vetor(vetor){
     console.log('\t5. Ordenar valores')
     console.log('\t6. Embaralhar valores')
 
-
     const option = get_number_inside_range(1, 6)
 
     if(option === 1 || option === 2 || option === 3){
         const valor = get_number('Digite o valor: ')
-
         if(option === 1){
             console.log('Vetor original: ')
             console.log(vetor)
@@ -168,7 +157,6 @@ export function mapear_vetor(vetor){
         const [limite_inferior, limite_superior] = input('separados por espaço: ').split(' ').map(Number)
 
         change_negatives_elements(vetor, limite_inferior, limite_superior)
-
         console.log(`Elementos negativos trocados por valores na faixa [${limite_inferior}, ${limite_superior}]`)
         console.log(vetor)
     } else if (option === 5){
@@ -182,8 +170,8 @@ export function mapear_vetor(vetor){
     }
 }
 
-export function add_novos_elementos(vetor, qtd_de_elementos){
 
+export function add_novos_elementos(vetor, qtd_de_elementos){
     const new_vector = new Array(vetor.length + 1)
     const tamanho = vetor.length + qtd_de_elementos
 
@@ -191,22 +179,21 @@ export function add_novos_elementos(vetor, qtd_de_elementos){
         if(i < (tamanho - qtd_de_elementos)) new_vector[i] = vetor[i]
         else new_vector[i] = get_number('Novo elemento: ')
     }
-
     return new_vector
 }
 
-export function remover_elementos_especificos(vetor, elemento){
 
+export function remover_elementos_especificos(vetor, elemento){
     const novo_tamanho = vetor.length - get_qtd_de_elementos_especificos(vetor, elemento)
     const vetor2 = new Array (novo_tamanho)
     let contador = 0
 
     for (let i = 0; i < vetor.length; i++) {
         if(vetor[i] !== elemento) vetor2[contador] = vetor[i]; contador++;
-        
     }
     return vetor2
 }
+
 
 function get_qtd_de_elementos_especificos(vetor, elemento){
     let contador = 0
@@ -218,6 +205,7 @@ function get_qtd_de_elementos_especificos(vetor, elemento){
     }
     return contador
 }
+
 
 export function editar_elemento_vetor(vetor, indice){
     
