@@ -8,12 +8,7 @@ function main(){
 
     menu()
     let option = get_number_inside_range(0, 12)
-    let vetor
-    let valor_padrao
-    let qtd_de_elementos
-    let elemento
-    let indice
-    let caminho_arquivo
+    let vetor, valor_padrao, qtd_de_elementos, elemento, indice, caminho_arquivo
 
     while (option !== 0) {
         console.clear()
@@ -70,7 +65,6 @@ function main(){
             fs.writeFileSync(caminho_arquivo, vetor.join(' ') + "\n", {flag: 'a'})
         }
     }
-
     console.clear()
 }
 
@@ -95,10 +89,6 @@ function menu() {
     menu += '\n0. Encerrar'
 
     console.log(menu)
-}
-
-function select_option(option){
-    
 }
 
 main()
