@@ -59,7 +59,7 @@ export function new_vector_fill_number(quantidade_de_elementos){
 export function vector_fill_aleatory_numbers(array){
 
     for (let i = 0; i < array.length; i++) {
-        array[i] = getRandomArbitrary(-100, 100).toFixed(0)
+        array[i] = Math.floor(getRandomArbitrary(-50, 50))
     }
     return array
 }
@@ -206,7 +206,6 @@ export function vetor_ascending_order(vetor){
 export function vetor_descending_order(vetor){
 
     let vetor_crescente = new Array(vetor.length)
-    let elemento
     let index
 
     const tamanho_vetor_original = vetor.length
