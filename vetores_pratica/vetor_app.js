@@ -97,4 +97,8 @@ function menu() {
     console.log(menu)
 }
 
+function select_option(option){
+    
+}
+
 main()
